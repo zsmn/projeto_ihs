@@ -1,0 +1,11 @@
+#
+#  Configure:
+#  source /opt/yocto/poky/1.3.2/environment-setup-core2-poky-linux
+#
+
+app: app2.cpp
+	$(CXX) app2.cpp include/game.cpp -o app -fopenmp -lm -lallegro_image -lallegro -lallegro_ttf -lallegro_font -lallegro_audio -lallegro_acodec -lallegro_primitives -lallegro_ttf -lallegro_font
+	# cp app /opt/tftp
+
+clean:
+	rm -rf *.o *~ core app
