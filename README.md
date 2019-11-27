@@ -4,6 +4,7 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 This project was made using Quartus II 15.0 (64-bit) and an Altera DE2-115.
+The specification and tutorials can be found in the pdf papers in this repository.
 
 ## Prerequisites
 
