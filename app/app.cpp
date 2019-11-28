@@ -43,7 +43,11 @@ int main(){
 	int ok = 1; //variavel responsavel por dizer se o jogador acertou a sequencia.
 	int run = 1; //variavel responsavel por dizer se o jogo ta rodando ou nao.
 	for(int i = 0; i < tamanho; i++){
-		new_color = rand()%4;
+		asm volatile(
+			"rdtsc;"
+			"movl %%eax, %0;"
+			:"=r" (new_color)
+		);
 		colors.pb(new_color);
 	}
 
@@ -251,7 +255,11 @@ int main(){
 			}
 			if(flag_acabei_fase == 1){
 				//Se eu acabei de fase, devo ir adicionar mais uma cor ao meu vetor colors..
-				new_color = rand()%4;
+				asm volatile(
+					"rdtsc;"
+					"movl %%eax, %0;"
+					:"=r" (new_color)
+				);
 				colors.pb(new_color);
 				tamanho = (int)colors.size();
 				break;
@@ -267,7 +275,11 @@ int main(){
 				colors.clear();
 				tamanho = 4;
 				for(int i = 0; i < tamanho; i++){
-					new_color = rand()%4;
+					asm volatile(
+						"rdtsc;"
+						"movl %%eax, %0;"
+						:"=r" (new_color)
+					);
 					colors.pb(new_color);
 				}
 			}else{//Se o jogador escolheu sair do jogo...
