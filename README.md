@@ -42,12 +42,17 @@ sudo sh desg.sh
 After that, open the "app" folder and tap this command on your terminal:
 
 ```
-sudo make
+sudo make all # to make all games (genius, pong and minefield)
+sudo make app1 # to make only app1 (genius game)
+sudo make app2 # to make only app2 (pong game)
+sudo make app3 # to make only app3 (minefield game)
 ```
 
-Note that this project have two apps that you can run (pong and genius), and you can decide them in the makefile!
+Note that this project have three apps that you can run (genius, pong and minefield), and you can decide them in the makefile!
 Now after compiling the app, you can now run it with that command:
 
 ```
-sudo ./app
+sudo ./app1 # to run genius game
+sudo ./app2 # to run pong game
+sudo ./app3 # to run minefield game
 ```
